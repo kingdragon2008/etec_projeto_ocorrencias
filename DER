@@ -1,0 +1,105 @@
+ 📊 ## Diagrama Entidade-Relacionamento (DER):
+
+┌────────────────────┐
+│      usuários      │
+├────────────────────┤
+│ id_usuario (PK)    │
+│ nome               │
+│ email              │
+│ senha              │
+│ tipo_usuario       │
+│ data_criacao       │
+└─────────┬──────────┘
+          │
+          │ 1:N
+          │
+┌─────────▼──────────┐
+│    ocorrencias     │
+├────────────────────┤
+│ id_ocorrencia (PK) │
+│ titulo             │
+│ descricao          │
+│ status             │
+│ data_ocorrencia    │
+│ id_usuario (FK)    │
+└─────────┬──────────┘
+          │
+          │ 1:N
+          │
+┌─────────▼──────────┐
+│     comentarios    │
+├────────────────────┤
+│ id_comentario (PK) │
+│ comentario         │
+│ data_comentario    │
+│ id_usuario (FK)    │
+│ id_ocorrencia (FK) │
+└────────────────────┘
+
+📝 Explicação das Entidades:
+---
+👤 usuários:
+
+Tabela responsável por armazenar os dados dos usuários do sistema.
+
+Campos:
+
+id_usuario → Identificador único
+
+nome → Nome do usuário
+
+email → Email de acesso
+
+senha → Senha criptografada
+
+tipo_usuario → aluno, professor ou coordenador
+
+data_criacao → Data de cadastro
+
+---
+
+📄 ocorrencias:
+
+Tabela responsável pelo registro das ocorrências.
+
+Campos:
+
+id_ocorrencia → Identificador único
+
+titulo → Título da ocorrência
+
+descricao → Descrição detalhada
+
+status → aberta, em andamento ou encerrada
+
+data_ocorrencia → Data do registro
+
+id_usuario → Usuário responsável pela ocorrência
+
+---
+
+💬 comentarios:
+
+Tabela utilizada para comentários dentro das ocorrências.
+
+Campos:
+
+id_comentario → Identificador único
+
+comentario → Conteúdo do comentário
+
+data_comentario → Data do comentário
+
+id_usuario → Usuário que comentou
+
+id_ocorrencia → Ocorrência relacionada
+
+---
+
+🔗 Relacionamentos:
+
+Um usuário pode registrar várias ocorrências
+
+Uma ocorrência pode possuir vários comentários
+
+Um usuário pode fazer vários comentários
