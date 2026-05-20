@@ -1,151 +1,137 @@
-## projeto-denúncias
+# projeto-denúncias 
 
-## Nome dos Integrantes:
+## Nome dos Integrantes
+>1- Isaac Vicêncio
 
-> 1- Isaac Vicêncio
+>2-Henrick França
 
-> 2-Henrick França
+>3- Maryanne Costa 
 
-> 3- Maryanne Costa
 ---
-📌 Sobre o Projeto
+📚 Sistema de denuncias anônimas 
 
-O Sistema de Ocorrências é um site desenvolvido para registrar, gerenciar e acompanhar ocorrências de forma prática e organizada.
-O objetivo do projeto é facilitar o controle de registros, permitindo que usuários possam criar, visualizar e administrar ocorrências em um ambiente simples e intuitivo.
+
+
 ---
-🚀 Funcionalidades:
+📝 Descrição
 
-📄 Cadastro de ocorrências
+Este projeto consiste em um sistema digital desenvolvido para facilitar a comunicação dentro do ambiente escolar. A plataforma permite que professores registrem reclamações, enquanto os alunos podem acessar e acompanhar essas informações de forma organizada.
 
-👤 Sistema de login de usuários
+O sistema também conta com um nível de administração exclusivo para o coordenador, garantindo controle e segurança na gestão dos usuários.
 
-📝 Edição e exclusão de ocorrências
+🎯 Objetivo
 
-🔍 Pesquisa e filtragem
+Criar um ambiente simples e eficiente para:
 
-📊 Painel administrativo
+- Registrar reclamações escolares
+  
+- Melhorar a comunicação entre professores e alunos
+  
+- Centralizar informações importantes
+  
+- Garantir controle de acesso por níveis de usuário
 
-📅 Registro de data e horário automático
+👥 Tipos de Usuários
 
-📱 Interface responsiva
----
-🛠️ Tecnologias Utilizadas:
+👨‍🎓 Alunos
+- Podem acessar o sistema
+  
+- Visualizam reclamações feitas pelos professores
+  
+- Não podem criar ou editar reclamações
 
-HTML5
+👨‍🏫 Professores
+- Podem acessar o sistema
+  
+- Podem criar, editar e excluir reclamações
+  
+- Possuem permissões intermediárias
 
-CSS3
+🧑‍💼 Coordenador
+- Acesso exclusivo a uma área administrativa
+  
+- Pode promover usuários comuns a professores
+  
+- Gerencia permissões do sistema
+  
+- Controle total sobre os usuários
 
-JavaScript
+🔐 Controle de Acesso
 
-PHP
+O sistema possui três níveis de acesso:
 
-MySQL
----
-📂 Estrutura do Projeto
+Nível	Permissões principais
 
-📦 sistema-ocorrencias
+- Aluno	Visualização
+  
+- Professor	Criação e gestão de reclamações
+  
+- Coordenador	Administração completa
+  
+🖥️ Estrutura de Páginas
 
- ┣ 📂 css
- 
- ┣ 📂 js
- 
- ┣ 📂 imagens
- 
- ┣ 📂 php
- 
- ┣ 📜 index.html
- 
- ┣ 📜 login.php
- 
- ┣ 📜 dashboard.php
- 
- ┣ 📜 banco.sql
- 
- ┗ 📜 README.md
----
-⚙️ Como Executar o Projeto:
+🔹 Página de Login
+Acesso com autenticação de usuário
+Direcionamento automático conforme o tipo de usuário
 
-1️⃣ Clonar o repositório:
+🔹 Página de Alunos
+Visualização das reclamações registradas
+Interface simples e informativa
 
-git clone https://github.com/seu-usuario/sistema-ocorrencias.git
+🔹 Página de Professores
+Registro de novas reclamações
+Edição e exclusão de registros
+Visualização completa
 
-2️⃣ Entrar na pasta do projeto:
+🔹 Página do Coordenador
+Painel administrativo
+Promoção de usuários para professores
+Gerenciamento de contas
 
-cd sistema-ocorrencias
+⚙️ Funcionalidades
+- Sistema de login com controle de permissões
+  
+- Cadastro e gerenciamento de usuários
+  
+- Registro de reclamações
+  
+- Separação de páginas por tipo de usuário
+  
+- Painel administrativo exclusivo
 
-3️⃣ Configurar o banco de dados:
+🚀 Tecnologias Sugeridas
+- Frontend: HTML, CSS, JavaScript
+  
+- Backend: Node.js / Python / PHP
+  
+- Banco de Dados: MySQL ou MongoDB
+  
+- Autenticação: JWT ou sessões
 
-Crie um banco no MySQL
+📌 Regras do Sistema
+- Apenas professores podem registrar reclamações
+  
+- Alunos possuem acesso somente leitura
+  
+- Apenas o coordenador pode promover usuários
+  
+- Cada usuário possui um tipo de permissão definido
 
-Importe o arquivo:
+💡 Possíveis Melhorias Futuras
+- Sistema de notificações
+  
+- Comentários nas reclamações
+  
+- Filtro por turma ou disciplina
+  
+- Aplicativo mobile
 
-banco.sql
+📄 Licença
 
-4️⃣ Configurar conexão com banco:
+Este projeto é de uso educacional e pode ser adaptado conforme necessário.
 
-No arquivo config.php, altere:
+## 📊 Modelagem do Banco
 
-$host = "localhost";
-
-$user = "root";
-
-$password = "";
-
-$database = "ocorrencias";
-
-5️⃣ Iniciar servidor local:
-
-Você pode usar:
-
-XAMPP
-
-WAMP
-
-Laragon
-
-Depois acesse:
-
-http://localhost/sistema-ocorrencias
----
-🖥️ Exemplo de Uso:
-
-O usuário faz login no sistema
-
-Registra uma nova ocorrência
-
-O administrador acompanha pelo painel
-
-As ocorrências podem ser editadas ou encerradas
----
-🔒 Segurança:
-
-Senhas criptografadas
-
-Validação de formulários
-
-Proteção contra SQL Injection
-
-Controle de sessão de usuários
----
-📈 Melhorias Futuras:
-
-Notificações em tempo real
-
-Upload de imagens
-
-Sistema de níveis de acesso
-
-Relatórios em PDF
-
-Integração com API
----
-👨‍💻 Autor:
-
-
-Projeto desenvolvido por Isaac Vicencio Costa.
----
-📄 Licença:
-
-Este projeto está sob a licença MIT.
-
-Este projeto está sob a licença MIT.
+Veja a modelagem completa em:
+- [Modelagem](modelagem.md)
+- Diagrama DER em /docs
